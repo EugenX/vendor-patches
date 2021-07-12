@@ -14,7 +14,7 @@ final class PathResolver
      * @see https://regex101.com/r/KhzCSu/1
      * @var string
      */
-    private const VENDOR_PACKAGE_DIRECTORY_REGEX = '#^(?<vendor_package_directory>.*?vendor\/(\w|\.|\-)+\/(\w|\.|\-)+)\/#si';
+    private const VENDOR_PACKAGE_DIRECTORY_REGEX = '#^(?<vendor_package_directory>.*?vendor[\/|\\\](\w|\.|\-)+[\/|\\\](\w|\.|\-)+)[\/|\\\]#si';
 
     public function resolveVendorDirectory(SmartFileInfo $fileInfo): string
     {
